@@ -1,5 +1,5 @@
 {% set name = "aiowebdav2" %}
-{% set version = "0.6.1" %}
+{% set version = "1.0.1" %}
 
 {% set python_min = "3.11" %}
 
@@ -8,8 +8,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aiowebdav2-{{ version }}.tar.gz
-  sha256: 73af164f3cb8146c4d01a7bda03aee001510c76c2e09bad2f4e3a501c85b1d73
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/aiowebdav2-{{ version }}.tar.gz
+  sha256: 3f06d1b0bfe56afd4ba98eef011d6bb3dbc3c8410c0bff11c4b7f42508d15966
 
 build:
   noarch: python
