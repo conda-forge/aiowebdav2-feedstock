@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.0.1"
+  version: "1.0.2"
   python_min: "3.13"
 
 package:
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/a/aiowebdav2/aiowebdav2-${{ version }}.tar.gz
-  sha256: 3f06d1b0bfe56afd4ba98eef011d6bb3dbc3c8410c0bff11c4b7f42508d15966
+  sha256: 46b410a9603f7b4d583d32c10e8e8dbd3ac7454f621293a28f829afbdcbe9b99
 
 build:
   number: 0
