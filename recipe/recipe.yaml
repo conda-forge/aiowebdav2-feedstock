@@ -1,0 +1,53 @@
+schema_version: 1
+
+context:
+  version: "1.0.1"
+  python_min: "3.13"
+
+package:
+  name: aiowebdav2
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/a/aiowebdav2/aiowebdav2-${{ version }}.tar.gz
+  sha256: 3f06d1b0bfe56afd4ba98eef011d6bb3dbc3c8410c0bff11c4b7f42508d15966
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - hatchling
+    - pip
+    - python ${{ python_min }}.*
+  run:
+    - aiohttp >=3.14.0
+    - lxml >=6.1.0
+    - python >=${{ python_min }}
+    - yarl >=1.18.3
+
+tests:
+  - python:
+      imports:
+        - aiowebdav2.client
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+
+about:
+  summary: Async Python 3 client for WebDAV, based on aiowebdav and https://github.com/ezhov-evgeny/webdav-client-python-3
+  description: |
+    aiowebdav2 is an asyncio based Python 3 client for WebDAV.
+
+    It is based on https://github.com/designerror/webdav-client-python and https://github.com/synodriver/aiowebdav.
+  homepage: https://github.com/jpbede/aiowebdav2/
+  repository: https://github.com/jpbede/aiowebdav2/
+  license: MIT
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - duncanmmacleod
