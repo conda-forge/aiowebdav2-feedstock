@@ -15,7 +15,6 @@ aiowebdav2 is an asyncio based Python 3 client for WebDAV.
 
 It is based on https://github.com/designerror/webdav-client-python and https://github.com/synodriver/aiowebdav.
 
-
 Current build status
 ====================
 
